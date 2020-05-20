@@ -1,0 +1,35 @@
+user send_verification_code
+---
+tags:
+  - user
+description: user send_verification_code
+
+parameters:
+  - name: email
+    in: query
+    description: email
+    schema:
+      type: string
+      default: ""
+
+responses:
+  200:
+    description: success response
+    schema:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: status_code
+          default: 200
+        message:
+          type: string
+          description: short message
+          default: ""
+        data:
+          type: object
+          properties:
+            user:
+              type: object
+              description: user info
+              default: {}

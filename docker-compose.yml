@@ -1,0 +1,25 @@
+# 配置开发环境的数据库
+version: "3"
+
+services:
+  redis:
+    container_name: sandbox_redisdb
+    image: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - "./data/redis:/data"
+    command:
+      redis-server
+
+  mysql:
+    container_name: sandbox_mysqldb
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 'mytaraxa2019'
+    ports:
+      - 3306:3306
+    volumes:
+      - "./data/mysql:/var/lib/mysql"
+    command:
+      mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
