@@ -1,5 +1,20 @@
 # New Flask App
 
+## 0. Introduction
+
+Simply clone this repository and start a new Flask app base on it.
+
+Its already has some features:
+- basic user api (register/login/send_verification_code), and login_required decorator;
+- swagger api docs;
+- some tests and some useful pytest fixtures;
+- ...
+
+Clone this repository:
+```
+> git clone git@github.com:kant-li/NewFlaskApp.git
+```
+
 ## 1. Init Environment
 
 Configs will be parsed from file `.env`, please create it and write in basic configs.

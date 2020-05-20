@@ -2,7 +2,7 @@
 auth functions
 """
 
-from flask import g, request
+from flask import g
 from flask_httpauth import HTTPTokenAuth
 from app.utils.utils import error_response
 from app.models.user import User
