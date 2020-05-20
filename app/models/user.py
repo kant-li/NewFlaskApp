@@ -3,7 +3,11 @@ user model
 """
 
 from werkzeug.security import generate_password_hash, check_password_hash
-from itsdangerous import TimedJSONWebSignatureSerializer as Serializer, SignatureExpired, BadSignature
+from itsdangerous import (
+    TimedJSONWebSignatureSerializer as Serializer,
+    SignatureExpired,
+    BadSignature,
+)
 
 from config import config
 from app.app import db
@@ -32,7 +36,7 @@ class User(db.Model):
 
     def generate_auth_token(self):
         """生成token"""
-        return TOKEN_SERIALIZER.dumps({"id": self.id}).decode('utf8')
+        return TOKEN_SERIALIZER.dumps({"id": self.id}).decode("utf8")
 
     @classmethod
     def verify_auth_token(cls, token):
@@ -43,7 +47,7 @@ class User(db.Model):
             return None
         except BadSignature:
             return None
-        user = User.query.get(data.get('id', 0))
+        user = User.query.get(data.get("id", 0))
         return user
 
     def __init__(self, username: str, password: str, email: str):

@@ -26,9 +26,9 @@ def login_client(app: fixture, client: fixture, insert_test_user: fixture):
         }
 
         res = client.post(LOGIN_URL, data=data)
-        access_token = json.loads(res.get_data()).get("data", {}).get('token')
+        access_token = json.loads(res.get_data()).get("data", {}).get("token")
         assert len(access_token) > 0
-        headers = {"Authorization": 'Bearer ' + access_token}
+        headers = {"Authorization": "Bearer " + access_token}
         client.token = access_token
         client.headers = headers
         return client

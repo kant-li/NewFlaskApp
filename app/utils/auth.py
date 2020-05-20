@@ -10,7 +10,7 @@ from app.models.user import User
 auth = HTTPTokenAuth()
 
 
-@auth. error_handler
+@auth.error_handler
 def unauthorized():
     return error_response(status=401, message="Unauthorized.")
 

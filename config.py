@@ -31,16 +31,16 @@ class BasicConfig:
         + MYSQL_DATABASE
     )
     SQLALCHEMY_DATABASE_URI_TEST = (
-            "mysql://"
-            + MYSQL_USER
-            + ":"
-            + MYSQL_PASSWORD
-            + "@"
-            + MYSQL_ADDRESS
-            + ":"
-            + str(MYSQL_PORT)
-            + "/"
-            + MYSQL_DATABASE_TEST
+        "mysql://"
+        + MYSQL_USER
+        + ":"
+        + MYSQL_PASSWORD
+        + "@"
+        + MYSQL_ADDRESS
+        + ":"
+        + str(MYSQL_PORT)
+        + "/"
+        + MYSQL_DATABASE_TEST
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
@@ -55,13 +55,13 @@ class BasicConfig:
     SWAGGER_TITLE = "New Flask App"
 
     # email
-    MAIL_SERVER = os.environ.get('MAIL_SERVER', 'smtp.qq.com')
-    MAIL_PORT = int(os.environ.get('MAIL_PORT', 465))
-    MAIL_USE_SSL = bool(os.environ.get('MAIL_USE_SSL', True))
-    MAIL_USE_TLS = bool(os.environ.get('MAIL_USE_TLS', False))
-    MAIL_USERNAME = os.environ.get('MAIL_USERNAME', '')
-    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD', '')
-    MAIL_DEFAULT_SENDER = os.environ.get('MAIL_DEFAULT_SENDER', MAIL_USERNAME)
+    MAIL_SERVER = os.environ.get("MAIL_SERVER", "smtp.qq.com")
+    MAIL_PORT = int(os.environ.get("MAIL_PORT", 465))
+    MAIL_USE_SSL = bool(os.environ.get("MAIL_USE_SSL", True))
+    MAIL_USE_TLS = bool(os.environ.get("MAIL_USE_TLS", False))
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME", "")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD", "")
+    MAIL_DEFAULT_SENDER = os.environ.get("MAIL_DEFAULT_SENDER", MAIL_USERNAME)
 
     # 服务器
     HTTP_HOST = "127.0.0.1"
@@ -69,7 +69,7 @@ class BasicConfig:
 
     # 其它
     SECRET_KEY = os.environ.get("SECRET_KEY", "flask_app")
-    TOKEN_EXPIRATION = int(os.environ.get("EXPIRATION", 60*60*24*30))
+    TOKEN_EXPIRATION = int(os.environ.get("EXPIRATION", 60 * 60 * 24 * 30))
 
 
 config = BasicConfig()
