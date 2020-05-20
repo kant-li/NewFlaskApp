@@ -1,5 +1,5 @@
 -- 选择数据库 --
-USE sandbox;
+USE flask_app;
 
 -- user 表 --
 CREATE TABLE user (
@@ -14,4 +14,4 @@ CREATE INDEX user_username ON user(username);
 CREATE INDEX user_email ON user(email);
 
 -- 赋权 --
-GRANT ALL ON sandbox.* TO 'sandbox'@'localhost';
+GRANT ALL ON sandbox.* TO 'flask_app'@'localhost';

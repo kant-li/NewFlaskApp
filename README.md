@@ -1,4 +1,4 @@
-# Taraxa Sandbox
+# New Flask App
 
 ## 1. Init Environment
 
@@ -10,8 +10,8 @@ An example of `.env` file:
 # mysql
 MYSQL_ADDRESS=127.0.0.1
 MYSQL_PORT=3306
-MYSQL_DATABASE=sandbox
-MYSQL_USER=sandbox
+MYSQL_DATABASE=flask_app
+MYSQL_USER=flask_app
 MYSQL_PASSWORD=password
 
 # redis

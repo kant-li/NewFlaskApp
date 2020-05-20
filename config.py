@@ -12,9 +12,9 @@ class BasicConfig:
     # mysql
     MYSQL_ADDRESS = os.environ.get("MYSQL_ADDRESS", "127.0.0.1")
     MYSQL_PORT = int(os.environ.get("MYSQL_PORT", 3306))
-    MYSQL_DATABASE = os.environ.get("MYSQL_DATABASE", "sandbox")
-    MYSQL_DATABASE_TEST = os.environ.get("MYSQL_DATABASE", "sandbox-test")
-    MYSQL_USER = os.environ.get("MYSQL_USER", "sandbox")
+    MYSQL_DATABASE = os.environ.get("MYSQL_DATABASE", "flask_app")
+    MYSQL_DATABASE_TEST = os.environ.get("MYSQL_DATABASE", "flask_app_test")
+    MYSQL_USER = os.environ.get("MYSQL_USER", "flask_app")
     MYSQL_PASSWORD = os.environ.get("MYSQL_PASSWORD", "password")
 
     # sqlalchemy
@@ -52,7 +52,7 @@ class BasicConfig:
     )
 
     # swagger
-    SWAGGER_TITLE = "Taraxa Sandbox"
+    SWAGGER_TITLE = "New Flask App"
 
     # email
     MAIL_SERVER = os.environ.get('MAIL_SERVER', 'smtp.qq.com')
@@ -68,7 +68,7 @@ class BasicConfig:
     HTTP_PORT = 5000
 
     # 其它
-    SECRET_KEY = os.environ.get("SECRET_KEY", "sandbox")
+    SECRET_KEY = os.environ.get("SECRET_KEY", "flask_app")
     TOKEN_EXPIRATION = int(os.environ.get("EXPIRATION", 60*60*24*30))
 
 
